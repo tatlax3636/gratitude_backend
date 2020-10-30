@@ -9,7 +9,8 @@ module.exports = (sequelize, DataTypes) => {
     y_location: DataTypes.INTEGER,
     id: {
       type: DataTypes.INTEGER,
-      primaryKey: true
+      primaryKey: true,
+      autoIncrement: true
     }
   }, {});
 

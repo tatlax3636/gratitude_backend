@@ -15,17 +15,45 @@ let test_db = async (req, res) => {
 }
 
 const getLeaves = async (req, res) => {
-    console.log(Leaf)
     Leaf.findAll({
 
     }).then(data => {
         let leaves = data.map(leaf => leaf.dataValues)
         res.status(200).send(leaves)
+    }).catch(err => {
+        console.error(`Error getting leaves: ${err}`)
+        res.status(500).send({ message: `Error getting leaves.`})
     })
 }
 
+const getAuthorLeaves = async (req, res) => {
+    let author = req.params.author.toLowerCase()
+    Leaf.findAll({
+        where: {
+            'author': author
+        }
+    }).then(data => {
+        res.status(200).send(data)
+    }).catch(err => {
+        console.error(err)
+        res.status(500).send(err)
+    })
+}
+
+const postLeaf = async (req, res) => {
+    Leaf.create({
+        author: req.body.author.toLowerCase(),
+        x_location: req.body.x_location,
+        y_location: req.body.y_location,
+        content: req.body.content
+    }).then(response => {
+        res.status(200).send({ message: response})
+    })
+}
 
 module.exports = {
     test_db: test_db,
-    getLeaves: getLeaves
+    getLeaves: getLeaves,
+    getAuthorLeaves: getAuthorLeaves,
+    postLeaf: postLeaf
 }

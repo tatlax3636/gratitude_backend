@@ -4,14 +4,14 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert('leaves', [
     {
-      author: 'Ryan',
+      author: 'ryan',
       content: `Nicole's face.`,
       x_location: 46,
       y_location: 32,
       id: 1
     },
     {
-      author: 'Ryan',
+      author: 'ryan',
       content: `Coffee.`,
       x_location: 34,
       y_location: 53,

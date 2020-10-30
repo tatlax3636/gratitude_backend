@@ -3,7 +3,7 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('leaves', {
       id: {
-        allowNull: false,
+        allowNull: true,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
@@ -20,9 +20,9 @@ module.exports = {
       y_location: {
         type: Sequelize.INTEGER
       },
-      id: {
-        type: Sequelize.INTEGER
-      },
+      // id: {
+      //   type: Sequelize.INTEGER
+      // },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE

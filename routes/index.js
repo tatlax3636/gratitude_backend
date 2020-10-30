@@ -8,6 +8,4 @@ router.get('/', function(req, res, next) {
 
 router.get('/test', leafController.test_db)
 
-router.get('/leaves', leafController.getLeaves)
-
 module.exports = router;
