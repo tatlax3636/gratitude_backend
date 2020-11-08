@@ -14,15 +14,6 @@ module.exports = {
       content: {
         type: Sequelize.STRING
       },
-      x_location: {
-        type: Sequelize.INTEGER
-      },
-      y_location: {
-        type: Sequelize.INTEGER
-      },
-      // id: {
-      //   type: Sequelize.INTEGER
-      // },
       createdAt: {
         allowNull: true,
         type: Sequelize.DATE
@@ -30,6 +21,12 @@ module.exports = {
       updatedAt: {
         allowNull: true,
         type: Sequelize.DATE
+      },
+      x_location: {
+        type: Sequelize.INTEGER
+      },
+      y_location: {
+        type: Sequelize.INTEGER
       }
     });
   },

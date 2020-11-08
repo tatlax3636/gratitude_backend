@@ -4,6 +4,7 @@ let db = new Sequelize(Config.DATABASE, `postgres`, `postgres`, {
     dialect: `postgres`
 })
 const Leaf  = require('../models').leaves
+const Location = require('../models').locations
 let test_db = async (req, res) => {
     try{
         await db.authenticate();
@@ -43,11 +44,16 @@ const getAuthorLeaves = async (req, res) => {
 const postLeaf = async (req, res) => {
     Leaf.create({
         author: req.body.author.toLowerCase(),
-        x_location: req.body.x_location,
-        y_location: req.body.y_location,
         content: req.body.content
     }).then(response => {
-        res.status(200).send({ message: response})
+        let leaf_id = response.id;
+        Location.create({
+            x_location: '10',
+            y_location: '12',
+            leaf_id: leaf_id
+        }).then(loc_response => {
+            res.status(200).send({ leaf_response: response, loc_response: loc_response})
+        })
     })
 }
 

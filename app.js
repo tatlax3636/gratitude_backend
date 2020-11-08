@@ -9,10 +9,11 @@ var usersRouter = require('./routes/users');
 let leavesRouter = require('./routes/leafRoutes')
 let port = process.env.PORT || 3000
 let cors = require('cors')
+let config = require('./config/config')
 
 var app = express();
 app.use(cors())
-
+console.log(config)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -31,6 +32,7 @@ app.use('/leaves', leavesRouter)
 app.use(function(req, res, next) {
   next(createError(404));
 });
+
 
 // error handler
 app.use(function(err, req, res, next) {
