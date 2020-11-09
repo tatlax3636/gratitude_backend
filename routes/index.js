@@ -7,7 +7,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/health', (req, res) => {
-  res.status(200).send(`Healthy!`)
+  res.status(200).send(`Healthy app!`)
 })
 
 router.get('/test', leafController.test_db)
