@@ -10,10 +10,11 @@ let leavesRouter = require('./routes/leafRoutes')
 let port = process.env.PORT || 3000
 let cors = require('cors')
 let config = require('./config/config')
+let dbConfig = require('./config/dbConfig')
 
 var app = express();
 app.use(cors())
-console.log(config)
+console.log(dbConfig)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
