@@ -11,11 +11,11 @@ const config = {
 if(env == 'development'){
 
 }else{
-    config.DATABASE = 'aaburphzkfju6d'
+    config.DATABASE = 'aa1qqw435zdt1ld'
     config.PASSWORD = 'bd12_efi56',
     config.USERNAME = 'disciplineDev',
     config.DB_PORT = '5432',
-    config.HOST = 'aaburphzkfju6d.cmg9iliyxleb.us-east-1.rds.amazonaws.com',
+    config.HOST = 'aa1qqw435zdt1ld.cmg9iliyxleb.us-east-1.rds.amazonaws.com',
     config.DIALECT = 'postgres'
 }
 
