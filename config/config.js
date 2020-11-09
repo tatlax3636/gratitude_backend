@@ -5,15 +5,18 @@ const config = {
     USERNAME: 'postgres',
     PASSWORD: '',
     HOST: '127.0.0.1',
-    DIALECT: 'postgres'   
+    DIALECT: 'postgres' 
 }
 
 if(env == 'development'){
 
 }else{
-    config.DATABASE = 'aaburphzkfju6d.cmg9iliyxleb.us-east-1.rds.amazonaws.com'
+    config.DATABASE = 'aaburphzkfju6d'
     config.PASSWORD = 'bd12_efi56',
-    config.USERNAME = 'disciplineDev'
+    config.USERNAME = 'disciplineDev',
+    config.DB_PORT = '5432',
+    config.HOST = 'aaburphzkfju6d.cmg9iliyxleb.us-east-1.rds.amazonaws.com',
+    config.DIALECT = 'postgres'
 }
 
 module.exports = {

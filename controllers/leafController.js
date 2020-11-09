@@ -3,14 +3,14 @@ const Config = require('../config/config').config
 let db = new Sequelize(Config.DATABASE, `postgres`, `postgres`, {
     dialect: `postgres`
 })
-const Leaf  = require('../models').leaves
+const Leaf = require('../models').leaves
 const Location = require('../models').locations
 let test_db = async (req, res) => {
-    try{
+    try {
         await db.authenticate();
-    console.log('Authenticated')
-    res.status(200).send({ message : 'authenticated'})
-    }catch(err){
+        console.log('Authenticated')
+        res.status(200).send({ message: 'authenticated' })
+    } catch (err) {
         console.error(err)
     }
 }
@@ -23,7 +23,7 @@ const getLeaves = async (req, res) => {
         res.status(200).send(leaves)
     }).catch(err => {
         console.error(`Error getting leaves: ${err}`)
-        res.status(500).send({ message: `Error getting leaves.`})
+        res.status(500).send({ message: `Error getting leaves.` })
     })
 }
 
@@ -44,16 +44,11 @@ const getAuthorLeaves = async (req, res) => {
 const postLeaf = async (req, res) => {
     Leaf.create({
         author: req.body.author.toLowerCase(),
-        content: req.body.content
+        content: req.body.content,
+        x_location: req.body.x_location,
+        y_location: req.body.y_location
     }).then(response => {
-        let leaf_id = response.id;
-        Location.create({
-            x_location: '10',
-            y_location: '12',
-            leaf_id: leaf_id
-        }).then(loc_response => {
-            res.status(200).send({ leaf_response: response, loc_response: loc_response})
-        })
+        res.status(200).send({ message: response })
     })
 }
 
