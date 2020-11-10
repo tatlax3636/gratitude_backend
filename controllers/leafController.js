@@ -64,6 +64,7 @@ const postAllLeaves = async (req, res) => {
             res.status(500).send({ message : 'Something went wrong.'})
         })
     }
+    res.status(200).send({ message : 'Added!'})
 }
 
 module.exports = {
