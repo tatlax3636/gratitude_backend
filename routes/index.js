@@ -3,7 +3,7 @@ var router = express.Router();
 let leafController = require('../controllers/leafController')
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.send({ message: 'Leaf server is up.'});
+  res.send({ message: 'Leaf server is up on Heroku.'});
 });
 
 router.get('/health', (req, res) => {
