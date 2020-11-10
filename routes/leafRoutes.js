@@ -11,4 +11,7 @@ router.get('/:author', leafController.getAuthorLeaves)
 // Post a new leaf.
 router.post('/', leafController.postLeaf)
 
+// Post all old leaves
+router.post('/update', leafController.postAllLeaves)
+
 module.exports = router;

@@ -52,9 +52,24 @@ const postLeaf = async (req, res) => {
     })
 }
 
+const postAllLeaves = async (req, res) => {
+    let leaves = req.leaf_array
+    for(let leaf of leaves){
+        Leaf.create({
+            author: leaf.author.toLowerCase(),
+            content: leaf.content,
+            x_location: leaf.x_location,
+            y_location: leaf.y_location
+        }).catch(err => {
+            res.status(500).send({ message : 'Something went wrong.'})
+        })
+    }
+}
+
 module.exports = {
     test_db: test_db,
     getLeaves: getLeaves,
     getAuthorLeaves: getAuthorLeaves,
-    postLeaf: postLeaf
+    postLeaf: postLeaf,
+    postAllLeaves: postAllLeaves
 }
