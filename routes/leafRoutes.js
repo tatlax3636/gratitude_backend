@@ -8,10 +8,12 @@ router.get('/', leafController.getLeaves)
 // Get all leaves for a specific author.
 router.get('/:author', leafController.getAuthorLeaves)
 
+// Post all old leaves
+router.post('/update', leafController.postAllLeaves)
+
 // Post a new leaf.
 router.post('/', leafController.postLeaf)
 
-// Post all old leaves
-router.post('/update', leafController.postAllLeaves)
+
 
 module.exports = router;
