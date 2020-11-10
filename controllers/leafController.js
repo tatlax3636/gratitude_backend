@@ -53,15 +53,16 @@ const postLeaf = async (req, res) => {
 }
 
 const postAllLeaves = async (req, res) => {
-    let leaves = req.body.leaf_array
+    let leaves = JSON.parse(req.body.leaf_array)
+    console.log(leaves[0])
     for(let leaf of leaves){
-        Leaf.create({
+        await Leaf.create({
             author: leaf.author.toLowerCase(),
             content: leaf.content,
             x_location: leaf.x_location,
             y_location: leaf.y_location
         }).catch(err => {
-            res.status(500).send({ message : 'Something went wrong.'})
+            res.status(500).send({ message : err})
         })
     }
     res.status(200).send({ message : 'Added!'})
