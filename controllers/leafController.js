@@ -53,7 +53,7 @@ const postLeaf = async (req, res) => {
 }
 
 const postAllLeaves = async (req, res) => {
-    let leaves = req.leaf_array
+    let leaves = req.body.leaf_array
     for(let leaf of leaves){
         Leaf.create({
             author: leaf.author.toLowerCase(),
