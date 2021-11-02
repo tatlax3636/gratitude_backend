@@ -28,8 +28,7 @@ const getLeaves = async (req, res) => {
         let leaves = data.map(leaf => leaf.dataValues)
         res.status(200).send(leaves)
     }).catch(err => {
-        console.log(res)
-        console.log(err)
+        console.log(Sequelize);
         console.error(`Error getting leaves: ${err}`)
         res.status(500).send({ message: `Error getting leaves.` })
     })
