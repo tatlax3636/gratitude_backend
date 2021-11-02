@@ -34,6 +34,7 @@ const getLeaves = async (req, res) => {
         leaves = leaves.filter(leaf => (leaf.createdAt).toString().split(' ')[3] == '2021')
         res.status(200).send(leaves)
     }).catch(err => {
+        console.log(Sequelize);
         console.error(`Error getting leaves: ${err}`)
         res.status(500).send({ message: `Error getting leaves.` })
     })
