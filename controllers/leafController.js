@@ -29,7 +29,8 @@ const getLeaves = async (req, res) => {
         
 
     }).then(data => {
-        let leaves = data.filter(leaf => leaf.createdAt.split('-')[0] == '2020').map(leaf => leaf.dataValues)
+        let leaves = data.map(leaf => leaf.dataValues)
+        leaves.filter(leaf => (leaf.createdAt).split('-')[0] == '2020')
         res.status(200).send(leaves)
     }).catch(err => {
         console.error(`Error getting leaves: ${err}`)
