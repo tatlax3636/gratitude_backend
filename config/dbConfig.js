@@ -14,6 +14,7 @@ let db_details = {
     'database': Config.DATABASE,
     'host': Config.HOST,
     'dialect': Config.DIALECT,
+    'dialectOptions': Config.DIALECT_OPTIONS,
   }
 }
 
