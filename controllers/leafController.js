@@ -1,17 +1,19 @@
 const Sequelize = require('sequelize')
 const Config = require('../config/config').config
-let db = new Sequelize(Config.DATABASE, `postgres`, `postgres`, {
-    dialect: "postgres",
+let db = new Sequelize(Config.DB_URL, {
+    dialect: `postgres`,
     dialectOptions: {
-    ssl: {
-      require: true, // This will help you. But you will see nwe error
-      rejectUnauthorized: false // This line will fix new error
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
     }
-  },
 })
 const Leaf = require('../models').leaves
 const Location = require('../models').locations
 let test_db = async (req, res) => {
+    console.log("DB:")
+    console.log(db)
     try {
         await db.authenticate();
         console.log('Authenticated')
@@ -22,10 +24,14 @@ let test_db = async (req, res) => {
 }
 
 const getLeaves = async (req, res) => {
+    console.log(Config);
     Leaf.findAll({
+        
 
     }).then(data => {
         let leaves = data.map(leaf => leaf.dataValues)
+        console.log(leaves[0].createdAt.toString().split(' '))
+        leaves = leaves.filter(leaf => (leaf.createdAt).toString().split(' ')[3] == '2021')
         res.status(200).send(leaves)
     }).catch(err => {
         console.log(Sequelize);

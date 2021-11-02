@@ -14,12 +14,7 @@ let db_details = {
     'database': Config.DATABASE,
     'host': Config.HOST,
     'dialect': Config.DIALECT,
-    "ssl": true,
-    "dialectOptions": {
-        "ssl": {
-          "require": true 
-        }
-    }
+    'dialectOptions': Config.DIALECT_OPTIONS,
   }
 }
 

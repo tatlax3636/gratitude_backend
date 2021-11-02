@@ -5,10 +5,23 @@ const path = require('path');
 const Sequelize = require('sequelize');
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-const config = require('../config/dbConfig.js').development;
+//const config = require('../config/dbConfig.js').development;
+const config = require('../config/config.js').config;
 const db = {};
 
-let  sequelize = new Sequelize(config.database, config.username, config.password, config);
+//let  sequelize = new Sequelize(config.database, config.username, config.password, config);
+
+//let sequelize = new Sequelize(`${config.DB_URL}?sslmode=require`) 
+let sequelize = new Sequelize(config.DB_URL, {
+  dialect: `postgres`,
+  dialectOptions: {
+      ssl: {
+          require: true,
+          rejectUnauthorized: false
+      }
+  }
+})
+
 
 
 fs
