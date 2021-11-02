@@ -10,6 +10,7 @@ let db_details = {
   },
   'qa': {
     'username': Config.USERNAME,
+    'ssl_mode': Config.SSL_MODE,
     'password': Config.PASSWORD,
     'database': Config.DATABASE,
     'host': Config.HOST,
