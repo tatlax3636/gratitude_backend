@@ -1,7 +1,13 @@
 const Sequelize = require('sequelize')
 const Config = require('../config/config').config
 let db = new Sequelize(Config.DATABASE, `postgres`, `postgres`, {
-    dialect: `postgres`
+    dialect: "postgres",
+    dialectOptions: {
+    ssl: {
+      require: true, // This will help you. But you will see nwe error
+      rejectUnauthorized: false // This line will fix new error
+    }
+  },
 })
 const Leaf = require('../models').leaves
 const Location = require('../models').locations
