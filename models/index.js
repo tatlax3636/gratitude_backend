@@ -8,16 +8,8 @@ const env = process.env.NODE_ENV || 'development';
 const config = require('../config/dbConfig.js').development;
 const db = {};
 
-// let  sequelize = new Sequelize(config.database, config.username, config.password, config);
-let sequelize = new Sequelize(Config.DB_URL, {
-  dialect: `postgres`,
-  dialectOptions: {
-      ssl: {
-          require: true,
-          rejectUnauthorized: false
-      }
-  }
-})
+let  sequelize = new Sequelize(config.database, config.username, config.password, {dialect: 'postgres', dialectOptions: { ssl: {required: true, rejectUnauthorized: false}}});
+
 
 
 fs
