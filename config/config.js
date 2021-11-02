@@ -16,7 +16,7 @@ if(env == 'development'){
     config.USERNAME = 'mmqxsypeshmgpa',
     config.SSL_MODE = 'require',
     config.DB_PORT = '5432',
-    config.HOST = 'ec2-52-207-124-89.compute-1.amazonaws.com',
+    config.HOST = 'ec2-52-207-124-89.compute-1.amazonaws.com?sslmode=require',
     config.DIALECT = 'postgres'
 }
 
