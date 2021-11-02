@@ -19,16 +19,17 @@ let test_db = async (req, res) => {
         console.log('Authenticated')
         res.status(200).send({ message: 'authenticated' })
     } catch (err) {
-        // console.error(err)
+        console.error(err)
     }
 }
 
 const getLeaves = async (req, res) => {
     console.log(Config);
     Leaf.findAll({
+        
 
     }).then(data => {
-        let leaves = data.map(leaf => leaf.dataValues)
+        let leaves = data.filter(leaf => leaf.createdAt.split('-')[0] == '2020').map(leaf => leaf.dataValues)
         res.status(200).send(leaves)
     }).catch(err => {
         console.error(`Error getting leaves: ${err}`)
