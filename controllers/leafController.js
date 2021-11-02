@@ -33,7 +33,7 @@ const getLeaves = async (req, res) => {
         // leaves.filter(leaf => (leaf.createdAt).split('-')[0] == '2020')
         let test_leaf = leaves[0];
         console.log(test_leaf['createdAt'])
-        res.status(200).send(leaves)
+        res.status(200).send(test_leaf)
     }).catch(err => {
         console.error(`Error getting leaves: ${err}`)
         res.status(500).send({ message: `Error getting leaves.` })
