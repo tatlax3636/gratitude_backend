@@ -16,6 +16,7 @@ let test_db = async (req, res) => {
 }
 
 const getLeaves = async (req, res) => {
+    console.log(Config);
     Leaf.findAll({
 
     }).then(data => {
