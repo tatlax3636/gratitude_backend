@@ -16,7 +16,9 @@ let db_details = {
     'dialect': Config.DIALECT,
     "ssl": true,
     "dialectOptions": {
-        "ssl": true
+        "ssl": {
+          "require": true 
+        }
     }
   }
 }
