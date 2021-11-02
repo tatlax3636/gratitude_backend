@@ -19,7 +19,8 @@ if(env == 'development'){
     config.DIALECT = 'postgres',
     config.DB_URL = 'postgres://mmqxsypeshmgpa:590453d3ecb0a321fc1d57f0b708891b9195f64424b084c640f80c362e3f0e94@ec2-52-207-124-89.compute-1.amazonaws.com:5432/d7q5tufv8n8h7p',
     config.DIALECT_OPTIONS = {
-        'ssl': true
+        ssl: true,
+        rejectUnauthorized: false
     }
 }
 
