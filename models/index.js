@@ -11,15 +11,7 @@ const db = {};
 
 //let  sequelize = new Sequelize(config.database, config.username, config.password, config);
 
-let sequelize = new Sequelize(`${config.DB_URL}?sslmode=require`, {
-  native: true,
-  dialect: 'postgres',
-  dialectOptions: {
-    ssl: {
-      rejectUnauthorized: false, // very important
-    },
-  },
-}) 
+let sequelize = new Sequelize(`${config.DB_URL}?sslmode=require`) 
 
 
 
