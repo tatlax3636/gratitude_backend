@@ -12,12 +12,13 @@ let db = new Sequelize(Config.DB_URL, {
 const Leaf = require('../models').leaves
 const Location = require('../models').locations
 let test_db = async (req, res) => {
+    console.log(db)
     try {
         await db.authenticate();
         console.log('Authenticated')
         res.status(200).send({ message: 'authenticated' })
     } catch (err) {
-        console.error(err)
+        // console.error(err)
     }
 }
 
