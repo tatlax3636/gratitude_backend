@@ -12,6 +12,7 @@ let db = new Sequelize(Config.DB_URL, {
 const Leaf = require('../models').leaves
 const Location = require('../models').locations
 let test_db = async (req, res) => {
+    console.log("DB:")
     console.log(db)
     try {
         await db.authenticate();
