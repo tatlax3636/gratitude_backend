@@ -5,7 +5,8 @@ const config = {
     USERNAME: 'postgres',
     PASSWORD: '',
     HOST: '127.0.0.1',
-    DIALECT: 'postgres' 
+    DIALECT: 'postgres',
+    DB_URL: ''
 }
 
 if(env == 'development'){
