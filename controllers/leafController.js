@@ -1,6 +1,6 @@
 const Sequelize = require('sequelize')
 const Config = require('../config/config').config
-let db = new Sequelize(Config.DATABASE, `postgres`, `postgres`, {
+let db = new Sequelize(Config.DB_URL, {
     dialect: `postgres`,
     dialectOptions: {
         ssl: {
