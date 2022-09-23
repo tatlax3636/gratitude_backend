@@ -31,7 +31,7 @@ const getLeaves = async (req, res) => {
     }).then(data => {
         let leaves = data.map(leaf => leaf.dataValues)
         console.log(leaves[0].createdAt.toString().split(' '))
-        leaves = leaves.filter(leaf => (leaf.createdAt).toString().split(' ')[3] == '2021')
+        leaves = leaves.filter(leaf => (leaf.createdAt).toString().split(' ')[3] == '2022')
         res.status(200).send(leaves)
     }).catch(err => {
         console.log(Sequelize);
