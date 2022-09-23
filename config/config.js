@@ -6,20 +6,20 @@ const config = {
     PASSWORD: '',
     HOST: '127.0.0.1',
     DIALECT: 'postgres',
-    DB_URL: 'postgres://mmqxsypeshmgpa:590453d3ecb0a321fc1d57f0b708891b9195f64424b084c640f80c362e3f0e94@ec2-52-207-124-89.compute-1.amazonaws.com:5432/d7q5tufv8n8h7p'
+    DB_URL: 'postgres://jdqzbpafrdwsnv:abfd09955a551ac67d0d270c0c02022eb422f818742631551bf9a1a4567b30ca@ec2-44-205-137-176.compute-1.amazonaws.com:5432/d85aoa8mbtv9n5'
 }
 
 if(env == 'development'){
 
 }else{
-    config.DATABASE = 'd7q5tufv8n8h7p'
-    config.PASSWORD = '590453d3ecb0a321fc1d57f0b708891b9195f64424b084c640f80c362e3f0e94',
-    config.USERNAME = 'mmqxsypeshmgpa',
+    config.DATABASE = 'd85aoa8mbtv9n5'
+    config.PASSWORD = 'abfd09955a551ac67d0d270c0c02022eb422f818742631551bf9a1a4567b30ca',
+    config.USERNAME = 'jdqzbpafrdwsnv',
     config.SSL_MODE = 'require',
     config.DB_PORT = '5432',
-    config.HOST = 'ec2-52-207-124-89.compute-1.amazonaws.com',
+    config.HOST = 'ec2-44-205-137-176.compute-1.amazonaws.com',
     config.DIALECT = 'postgres',
-    config.DB_URL = 'postgres://mmqxsypeshmgpa:590453d3ecb0a321fc1d57f0b708891b9195f64424b084c640f80c362e3f0e94@ec2-52-207-124-89.compute-1.amazonaws.com:5432/d7q5tufv8n8h7p',
+    config.DB_URL = 'postgres://jdqzbpafrdwsnv:abfd09955a551ac67d0d270c0c02022eb422f818742631551bf9a1a4567b30ca@ec2-44-205-137-176.compute-1.amazonaws.com:5432/d85aoa8mbtv9n5',
     config.DIALECT_OPTIONS = {
         ssl: true,
         rejectUnauthorized: false
