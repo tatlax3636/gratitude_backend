@@ -11,7 +11,7 @@ const config = {
 
 if(env == 'development'){
 
-}else{
+}else if(env == 'production'){
     config.DATABASE = 'd1b06vk8qi3puk'
     config.PASSWORD = '418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8',
     config.USERNAME = 'hbphhhwnpcxtae',
