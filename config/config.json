@@ -36,9 +36,9 @@
         "ssl": true,
         "dialect_options": {
             "ssl": {
-                "require": true
-            },
-            "rejectUnauthorized": false
+                "require": true,
+                "rejectUnauthorized": false
+            }
         }
       }
   }
