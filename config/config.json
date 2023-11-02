@@ -26,15 +26,18 @@
         }
       },
     "production": {
-        "username": "root",
+        "username": "hbphhhwnpcxtae",
         "password": "418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8",
         "database": "d1b06vk8qi3puk",
         "port": "5432",
         "url": "postgres://hbphhhwnpcxtae:418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8@ec2-3-232-218-211.compute-1.amazonaws.com:5432/d1b06vk8qi3puk",
         "host": "ec2-44-205-137-176.compute-1.amazonaws.com",
         "dialect": "postgres",
+        "ssl": true,
         "dialect_options": {
-            "ssl": true,
+            "ssl": {
+                "require": true
+            },
             "rejectUnauthorized": false
         }
       }
