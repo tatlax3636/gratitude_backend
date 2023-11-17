@@ -10,27 +10,27 @@ const config = {
 }
 
 if(env == 'development'){
-    config.DATABASE = 'd1b06vk8qi3puk',
-    config.PASSWORD = '418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8',
-    config.USERNAME = 'hbphhhwnpcxtae',
+    config.DATABASE = 'da7f0hb89dvelu',
+    config.PASSWORD = 'f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172',
+    config.USERNAME = 'jpurthkddrypva',
     config.SSL_MODE = 'require',
     config.DB_PORT = '5432',
-    config.HOST = 'ec2-44-205-137-176.compute-1.amazonaws.com',
+    config.HOST = 'ec2-23-21-10-246.compute-1.amazonaws.com',
     config.DIALECT = 'postgres',
-    config.DB_URL = 'postgres://hbphhhwnpcxtae:418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8@ec2-3-232-218-211.compute-1.amazonaws.com:5432/d1b06vk8qi3puk',
+    config.DB_URL = 'postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu',
     config.DIALECT_OPTIONS = {
         ssl: true,
         rejectUnauthorized: false
     }
 }else if(env == 'production'){
-    config.DATABASE = 'd1b06vk8qi3puk',
-    config.PASSWORD = '418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8',
-    config.USERNAME = 'hbphhhwnpcxtae',
+    config.DATABASE = 'da7f0hb89dvelu',
+    config.PASSWORD = 'f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172',
+    config.USERNAME = 'jpurthkddrypva',
     config.SSL_MODE = 'require',
     config.DB_PORT = '5432',
-    config.HOST = 'ec2-44-205-137-176.compute-1.amazonaws.com',
+    config.HOST = 'ec2-23-21-10-246.compute-1.amazonaws.com',
     config.DIALECT = 'postgres',
-    config.DB_URL = 'postgres://hbphhhwnpcxtae:418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8@ec2-3-232-218-211.compute-1.amazonaws.com:5432/d1b06vk8qi3puk',
+    config.DB_URL = 'postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu',
     config.DIALECT_OPTIONS = {
         ssl: true,
         rejectUnauthorized: false
