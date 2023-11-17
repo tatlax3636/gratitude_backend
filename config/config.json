@@ -1,11 +1,11 @@
 {
     "development": {
-      "username": "root",
-      "password": "418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8",
-      "database": "d1b06vk8qi3puk",
+      "username": "jpurthkddrypva",
+      "password": "f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172",
+      "database": "da7f0hb89dvelu",
       "port": "5432",
-      "url": "postgres://hbphhhwnpcxtae:418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8@ec2-3-232-218-211.compute-1.amazonaws.com:5432/d1b06vk8qi3puk",
-      "host": "ec2-44-205-137-176.compute-1.amazonaws.com",
+      "url": "postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu",
+      "host": "ec2-23-21-10-246.compute-1.amazonaws.com",
       "dialect": "postgres",
       "dialect_options": {
         "ssl": true,
@@ -13,12 +13,12 @@
     }
     },
     "test": {
-        "username": "root",
-        "password": "418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8",
-        "database": "d1b06vk8qi3puk",
+        "username": "jpurthkddrypva",
+        "password": "f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172",
+        "database": "da7f0hb89dvelu",
         "port": "5432",
-        "url": "postgres://hbphhhwnpcxtae:418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8@ec2-3-232-218-211.compute-1.amazonaws.com:5432/d1b06vk8qi3puk",
-        "host": "ec2-44-205-137-176.compute-1.amazonaws.com",
+        "url": "postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu",
+        "host": "ec2-23-21-10-246.compute-1.amazonaws.com",
         "dialect": "postgres",
         "dialect_options": {
             "ssl": true,
@@ -26,12 +26,12 @@
         }
       },
     "production": {
-        "username": "hbphhhwnpcxtae",
-        "password": "418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8",
-        "database": "d1b06vk8qi3puk",
+        "username": "jpurthkddrypva",
+        "password": "f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172",
+        "database": "da7f0hb89dvelu",
         "port": "5432",
-        "url": "postgres://hbphhhwnpcxtae:418038998ddb52517aba74042893a65a684c851a92cbb4210a826b3c8f46cbd8@ec2-3-232-218-211.compute-1.amazonaws.com:5432/d1b06vk8qi3puk",
-        "host": "ec2-3-232-218-211.compute-1.amazonaws.com",
+        "url": "postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu",
+        "host": "ec2-23-21-10-246.compute-1.amazonaws.com",
         "dialect": "postgres",
         "ssl": true,
         "dialectOptions": {
