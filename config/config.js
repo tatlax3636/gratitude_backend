@@ -10,27 +10,27 @@ const config = {
 }
 
 if(env == 'development'){
-    config.DATABASE = 'da7f0hb89dvelu',
-    config.PASSWORD = 'f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172',
-    config.USERNAME = 'jpurthkddrypva',
+    config.DATABASE = 'd23biaoe2mmot8'
+    config.PASSWORD = 'p20cffd739176323a0be33ebab8dd49e45a031b73e0865ed715a0f816cceea825',
+    config.USERNAME = 'u35d7q95pstf5g',
     config.SSL_MODE = 'require',
     config.DB_PORT = '5432',
-    config.HOST = 'ec2-23-21-10-246.compute-1.amazonaws.com',
+    config.HOST = 'c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
     config.DIALECT = 'postgres',
-    config.DB_URL = 'postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu',
+    config.DB_URL = 'postgres://u35d7q95pstf5g:p20cffd739176323a0be33ebab8dd49e45a031b73e0865ed715a0f816cceea825@c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d23biaoe2mmot8'
     config.DIALECT_OPTIONS = {
         ssl: true,
         rejectUnauthorized: false
     }
 }else if(env == 'production'){
-    config.DATABASE = 'da7f0hb89dvelu',
-    config.PASSWORD = 'f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172',
-    config.USERNAME = 'jpurthkddrypva',
+    config.DATABASE = 'd23biaoe2mmot8'
+    config.PASSWORD = 'p20cffd739176323a0be33ebab8dd49e45a031b73e0865ed715a0f816cceea825',
+    config.USERNAME = 'u35d7q95pstf5g',
     config.SSL_MODE = 'require',
     config.DB_PORT = '5432',
-    config.HOST = 'ec2-23-21-10-246.compute-1.amazonaws.com',
+    config.HOST = 'c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com',
     config.DIALECT = 'postgres',
-    config.DB_URL = 'postgres://jpurthkddrypva:f18e935a7d7638ae9834a3b15aa0a647a54f820b5a3568a9e4957f7fe9db4172@ec2-23-21-10-246.compute-1.amazonaws.com:5432/da7f0hb89dvelu',
+    config.DB_URL = 'postgres://u35d7q95pstf5g:p20cffd739176323a0be33ebab8dd49e45a031b73e0865ed715a0f816cceea825@c1i13pt05ja4ag.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/d23biaoe2mmot8'
     config.DIALECT_OPTIONS = {
         ssl: true,
         rejectUnauthorized: false
