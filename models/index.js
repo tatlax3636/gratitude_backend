@@ -12,7 +12,7 @@ const db = {};
 //let  sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 //let sequelize = new Sequelize(`${config.DB_URL}?sslmode=require`) 
-let sequelize = new Sequelize(config.DB_URL, {
+let sequelize = new Sequelize(process.env.DB_URL, {
   dialect: `postgres`,
   dialectOptions: {
       ssl: {
