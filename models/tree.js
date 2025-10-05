@@ -5,10 +5,11 @@ module.exports = (sequelize, DataTypes) => {
         isPublic: DataTypes.BOOLEAN,
         name: DataTypes.STRING,
         theme: DataTypes.STRING,
-        // id: {
-        //     type: DataTypes.UUID.V4,
-        //     primaryKey: true
-        // },
+        tree_id: {
+            type: DataTypes.INTEGER,
+            primaryKey: true,
+            autoIncrement: true
+        },
         access_code: DataTypes.INTEGER,
         admin_code: DataTypes.INTEGER
     }, {});

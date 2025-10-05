@@ -2,7 +2,7 @@
 
 
 module.exports = (sequelize, DataTypes) => {
-  const leaves = sequelize.define('leaves', {
+  const Leaf = sequelize.define('leaves', {
     author: DataTypes.STRING,
     content: DataTypes.STRING,
     id: {
@@ -10,9 +10,11 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
+    tree_id: DataTypes.INTEGER,
     x_location: DataTypes.INTEGER,
     y_location: DataTypes.INTEGER
   }, {});
 
-  return leaves;
+  
+  return Leaf;
 };
