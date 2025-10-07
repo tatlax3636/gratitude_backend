@@ -7,6 +7,7 @@ const config = {
     HOST: '127.0.0.1',
     DIALECT: 'postgres',
     DB_URL: 'postgres://ud9pkq0k7mi2tr:p309d7f6cd50276e57402014441e33bea954518554ab58335ac232d1e16230386@c8qf22e50d0hk5.cluster-czrs8kj4isg7.us-east-1.rds.amazonaws.com:5432/dcgdc966ji532j'
+    
 }
 
 if(env == 'development'){

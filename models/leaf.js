@@ -1,6 +1,5 @@
 'use strict';
 
-
 module.exports = (sequelize, DataTypes) => {
   const Leaf = sequelize.define('leaves', {
     author: DataTypes.STRING,
@@ -15,6 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     y_location: DataTypes.INTEGER
   }, {});
 
-  
+  Leaf.associate = function (models) {
+    Leaf.belongsTo(models.trees); // Call hasMany on the User model instance
+  };
+
   return Leaf;
 };

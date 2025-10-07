@@ -10,9 +10,13 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        access_code: DataTypes.INTEGER,
-        admin_code: DataTypes.INTEGER
+        access_code: DataTypes.STRING,
+        admin_code: DataTypes.STRING
     }, {});
+
+    Tree.associate = function (models) {
+        Tree.hasMany(models.leaves,{foreignKey: 'tree_id'}); // Call hasMany on the User model instance
+    };
 
 
     return Tree;

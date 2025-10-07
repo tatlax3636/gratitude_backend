@@ -22,11 +22,6 @@ let sequelize = new Sequelize(process.env.DB_URL, {
   }
 })
 
-const Leaf = require('./leaf')
-const Tree = require('./tree')
-
-Tree.hasMany(Leaf, { foreignKey: 'tree_id', as: 'leaves' }); // A tree has many leaves
-Leaf.belongsTo(Tree, { foreignKey: 'tree_id', as: 'tree' }); // A Post belongs to one User
 
 fs
   .readdirSync(__dirname)
