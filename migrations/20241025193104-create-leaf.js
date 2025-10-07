@@ -31,7 +31,7 @@ module.exports = {
       tree_id: {
         type: Sequelize.INTEGER,
         references: {
-          model: 'trees', // name of Target model
+          model: 'Trees', // name of Target model
           key: 'tree_id', // key in Target model that we're referencing
         },
         onUpdate: 'CASCADE',
