@@ -3,7 +3,7 @@ const router = express.Router();
 const leafController = require('../controllers/leafController')
 
 // Get all leaves.
-router.get('/', leafController.getLeaves)
+router.get('/:tree_id', leafController.getLeaves)
 
 // Get all leaves for a specific author.
 router.get('/:author', leafController.getAuthorLeaves)
