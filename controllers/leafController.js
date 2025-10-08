@@ -24,9 +24,12 @@ let test_db = async (req, res) => {
 }
 
 const getLeaves = async (req, res) => {
-    console.log(Config);
+    let tree_id = req.params.tree_id.toLowerCase()
+
     Leaf.findAll({
-        
+        where: {
+            'tree_id': tree_id
+        }
 
     }).then(data => {
         console.log(data)
