@@ -14,9 +14,9 @@ module.exports = (sequelize, DataTypes) => {
     y_location: DataTypes.INTEGER
   }, {});
 
-  Leaf.associate = function (models) {
-    Leaf.belongsTo(models.trees); // Call hasMany on the User model instance
-  };
+  // Leaf.associate = models => {
+  //   Leaf.belongsTo(models.trees); 
+  // };
 
   return Leaf;
 };

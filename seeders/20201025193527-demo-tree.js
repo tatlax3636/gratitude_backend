@@ -9,9 +9,7 @@ module.exports = {
         theme: 'dark',
         access_code: '1234access',
         admin_code: '5678admin',
-        tree_id: 1234,
-        createdAt: '2025-12-25T10:00:00.000Z',
-        updatedAt: '2025-12-25T10:00:00.000Z'
+        tree_id: 1234
       },
       {
         isPublic: true,
@@ -19,9 +17,7 @@ module.exports = {
         theme: 'dark',
         access_code: '1234access',
         admin_code: '5678admin',
-        tree_id: 5678,
-        createdAt: '2025-12-25T10:00:00.000Z',
-        updatedAt: '2025-12-25T10:00:00.000Z'
+        tree_id: 5678
       }
 
 

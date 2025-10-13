@@ -13,7 +13,8 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       name: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        unique: true
       },
       createdAt: {
         allowNull: true,
@@ -36,6 +37,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('leaves');
+    await queryInterface.dropTable('trees');
   }
 };

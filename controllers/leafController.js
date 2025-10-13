@@ -24,23 +24,24 @@ let test_db = async (req, res) => {
 }
 
 const getLeaves = async (req, res) => {
-    let tree_id = req.params.tree_id
+    let tree_id = req.query.tree_id;
+    let where_conditions = {};
+    if (tree_id) {
+        console.log("Getting all leaves for tree_id: " + tree_id);
+        where_conditions.tree_id = tree_id;
+    } else {
+        console.log("No tree_id provided, fetching all leaves.");
+    }
 
+    // Retrieve all leaves using the tree_id if available, otherwise get all leaves.
     Leaf.findAll({
-        where: {
-            'tree_id': tree_id
-        }
-
+        where: where_conditions
     }).then(data => {
-        console.log(data)
         let leaves = data.map(leaf => leaf.dataValues)
-        // console.log(leaves[0].createdAt.toString().split(' '))
-        // leaves = leaves.filter(leaf => (leaf.createdAt).toString().split(' ')[3] == '2023')
+        //TODO: filter leaves by this year only
         res.status(200).send(leaves)
     }).catch(err => {
-        console.log(Sequelize);
-        console.error(`Error getting leaves: ${err}`)
-        res.status(500).send({ message: `Error getting leaves.` })
+        res.status(500).send({ message: `Error getting leaves. ` + err.message })
     })
 }
 
@@ -59,30 +60,32 @@ const getAuthorLeaves = async (req, res) => {
 }
 
 const postLeaf = async (req, res) => {
-    Leaf.create({
-        author: req.body.author.toLowerCase(),
-        content: req.body.content,
-        x_location: req.body.x_location,
-        y_location: req.body.y_location
-    }).then(response => {
-        res.status(200).send({ message: response })
-    })
+    try {
+        const newLeafResponse = await Leaf.create(
+            req.body
+        )
+        res.status(200).send({ message: newLeafResponse })
+    } catch (error) {
+        console.log(error.message)
+        res.status(500).send({message : "Could not create leaf, something went wrong."})
+    }
+
 }
 
 const postAllLeaves = async (req, res) => {
     let leaves = JSON.parse(req.body.leaf_array)
     console.log(leaves[0])
-    for(let leaf of leaves){
+    for (let leaf of leaves) {
         await Leaf.create({
             author: leaf.author.toLowerCase(),
             content: leaf.content,
             x_location: leaf.x_location,
             y_location: leaf.y_location
         }).catch(err => {
-            res.status(500).send({ message : err})
+            res.status(500).send({ message: err })
         })
     }
-    res.status(200).send({ message : 'Added!'})
+    res.status(200).send({ message: 'Added!' })
 }
 
 module.exports = {

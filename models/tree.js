@@ -14,9 +14,7 @@ module.exports = (sequelize, DataTypes) => {
         admin_code: DataTypes.STRING
     }, {});
 
-    Tree.associate = function (models) {
-        Tree.hasMany(models.leaves,{foreignKey: 'tree_id'}); // Call hasMany on the User model instance
-    };
+
 
 
     return Tree;
